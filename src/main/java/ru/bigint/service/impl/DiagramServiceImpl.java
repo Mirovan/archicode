@@ -38,6 +38,5 @@ public class DiagramServiceImpl implements DiagramService {
         parser.diagram();
 
         return diagram.draw();
-
     }
 }

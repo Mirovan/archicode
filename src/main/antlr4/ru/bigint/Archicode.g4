@@ -2,7 +2,8 @@ grammar Archicode;
 diagram: 'Diagram {' statement+ '}';
 
 statement: relation | grouping;
-relation: object '->' object |
+relation: object |
+          object '->' object |
           object '->('relationDirections')' object |
           object '->' object '('priorityPosition')' |
           object '->('relationDirections')' object '('priorityPosition')';
