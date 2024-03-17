@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: ArchiCode
+
+  thymeleaf:
+    check-template: true
+    encoding: utf-8
+    prefix: classpath:/templates/
+    suffix: .htm
+    servlet.content-type: text/html
+    cache: false
