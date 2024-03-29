@@ -63,6 +63,9 @@ public class Diagram {
 
         //Отрисовка всех объектов
         for (var obj : objects) {
+            if (obj.getCoord() == null) {
+                calculateObjectCoord(obj, zeroX, zeroY);
+            }
             outData += drawObj(obj, defaultWidth, defaultHeight);
         }
 
@@ -346,7 +349,7 @@ public class Diagram {
      * height
      */
     private String drawObj(DiagObject obj, int width, int height) {
-        if (obj != null) {
+        if (obj != null && obj.getCoord() != null) {
             int x = obj.getCoord().getX();
             int y = obj.getCoord().getY();
             return "<rect x=\"" + x + "\" y=\"" + y + "\" width=\"" + width + "\" height=\"" + height + "\" rx=\"15\" style=\"fill:#eee;stroke-width:1;stroke:black\" />\n" +

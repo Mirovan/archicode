@@ -23,10 +23,17 @@ public class MainController {
 
     @GetMapping("/")
     public String viewHomePage(Model model) {
-        String sample = "a->b\n" +
-                "b->c\n" +
-                "c->(bottom, top)d(bottom)\n" +
-                "b->(bottom, left) d";
+        String sample = "aaa {\n" +
+                "    desc: 'aboutA'\n" +
+                "}\n" +
+                "\n" +
+                "bbb {\n" +
+                "    type: 'rect',\n" +
+                "    ip: '10.1.2.3',\n" +
+                "    desc: 'aboutB'\n" +
+                "}\n" +
+                "\n" +
+                "aaa -> bbb";
         model.addAttribute("data", sample);
         return "index";
     }

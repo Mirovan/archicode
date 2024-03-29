@@ -10,14 +10,10 @@ import ru.bigint.CustomArchicodeBaseListener;
 import ru.bigint.model.Diagram;
 import ru.bigint.service.DiagramService;
 
-import java.io.IOException;
-import java.io.InputStream;
-
 @Service
 public class DiagramServiceImpl implements DiagramService {
     @Override
     public String createDiagram(String data) {
-        data = "Diagram {" + data + "}";
         //Loading the DSL script into the ANTLR stream.
         CharStream cs = CharStreams.fromString(data);
 

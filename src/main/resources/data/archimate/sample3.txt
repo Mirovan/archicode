@@ -1,0 +1,14 @@
+ing1 {
+    desc: Ингресс контроллер
+}
+
+ing1-> svc1
+deploy1->(left, right) svc1(left)
+
+ing2-> svc2
+deploy2->(left, right) svc2(left)
+
+deploy3->(left, right) svc3(left)
+
+deploy3 -> svc2
+deploy3 -> svc1

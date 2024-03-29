@@ -1,0 +1,11 @@
+aaa {
+    desc: 'aboutA'
+}
+
+bbb {
+    type: 'rect',
+    ip: '10.1.2.3',
+    desc: 'aboutB'
+}
+
+aaa -> bbb
